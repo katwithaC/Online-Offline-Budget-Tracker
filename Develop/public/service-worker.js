@@ -14,7 +14,6 @@ const FILES_TO_CACHE = [
 ];
 
 
-
 // when install event happens, cache all the static files
 self.addEventListener("install", function(evt) {
   evt.waitUntil(
@@ -81,20 +80,6 @@ self.addEventListener("fetch", function(evt) {
     })
   );
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 console.log("Hi from your service-worker.js file!");
