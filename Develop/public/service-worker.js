@@ -1,3 +1,7 @@
+const CACHE_NAME = "static-cache-v2";
+const DATA_CACHE_NAME = "data-cache-v1";
+
+
 const FILES_TO_CACHE = [
     "/",
     "/index.html",
@@ -9,8 +13,7 @@ const FILES_TO_CACHE = [
     "/db.js",   
 ];
 
-const CACHE_NAME = "static-cache-v2";
-const DATA_CACHE_NAME = "data-cache-v1";
+
 
 // when install event happens, cache all the static files
 self.addEventListener("install", function(evt) {
@@ -21,6 +24,7 @@ self.addEventListener("install", function(evt) {
     })
   );
 
+  //tell the browser to activate this service worker immediately when it has finised installing
   self.skipWaiting();
 });
 
